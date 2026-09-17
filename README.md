@@ -87,13 +87,13 @@ The application is designed as a **frontend-first project** with no database, au
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/JoleneRan/ai-workplace-companion.git
+git clone https://github.com/JoleneRan/worksuite-ai.git
 ```
 
 ### 2. Navigate to the project
 
 ```bash
-cd ai-workplace-companion
+cd worksuite-ai
 ```
 
 ### 3. Install dependencies
