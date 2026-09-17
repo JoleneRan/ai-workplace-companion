@@ -1,161 +1,169 @@
-# AI Workplace Companion
+# AI Workplace Assistant
 
-Build a modern, responsive  web app called  "AI Workplace Productivity Assistant" - SaaS-style dashboard that uses AI to help users complete workplace tasks.
+An AI-powered workplace productivity assistant designed to help professionals streamline everyday tasks, improve communication, plan their workload, and research information more efficiently.
 
-Core Requirement
+## Overview
 
-This is an AI-first application. All Email, Task Planner, Research, and Chat responses must be generated dynamically by an AI model, not hardcoded, generic, or pre-written responses.
+**AI Workplace Companion** is a modern, responsive SaaS-style web application that brings several AI-powered productivity tools into one workspace.
 
-The app is frontend-only:
+The application allows users to generate professional emails, create intelligent task schedules, research topics and articles, and interact with an AI workplace assistant through a conversational interface.
 
-No backend
+The application is designed as a **frontend-first project** with no database, authentication, or persistent user data storage.
 
-No database
+> **Responsible AI:** AI-generated content may contain errors. Users should review and verify important information before using it.
 
-No authentication
+## Features
 
-No persistent storage
+### Smart Email Generator
 
-Do not save user conversations or generated content
+* Generate professional emails using AI.
+* Supports multiple communication tones:
 
-Use client-side API integration for AI generation
+  * Formal
+  * Friendly
+  * Persuasive
+* Brief-to-detailed conciseness control.
+* Sample data loading.
+* Editable AI-generated email output.
+* Copy and regenerate functionality.
 
-Structure the app so an AI API key/model can be connected easily
+### AI Task Planner
 
-Features
+* Generate AI-powered daily schedules.
+* Generate weekly schedules.
+* Intelligent task prioritization.
+* Preset scenarios:
 
-1. Smart Email Generator
+  * Project Launch
+  * Weekly Review
+* Editable generated schedules.
 
-User enters recipient/context, purpose, and key points.
+### AI Research Assistant
 
-Tone: Formal, Friendly, Persuasive
+* Research a topic using AI.
+* Summarize pasted articles or content.
+* Accept user-provided URLs.
+* Generate:
 
-Conciseness: Brief ↔ Detailed
+  * Summaries
+  * Key insights
+  * Recommendations
+* Editable and copyable AI-generated results.
+* Does not invent research results when source content cannot be accessed.
 
-"Load Sample Data" populates the form with example inputs.
+### AI Workplace Chat
 
-AI dynamically generates the complete professional email.
+* Interactive AI workplace assistant.
+* Dynamically generated responses based on user prompts.
+* Supports workplace productivity, planning, brainstorming, writing, and research.
+* Conversation context within the current session.
+* Copy and regenerate responses.
+* Clear conversation functionality.
 
-Editable output with Copy and Regenerate buttons.
+### Modern Dashboard
 
-2. AI Task Planner
+* Responsive SaaS dashboard design.
+* Collapsible sidebar navigation.
+* Dashboard overview.
+* Cmd+K / Ctrl+K command palette.
+* Light and Dark Mode.
+* Slate/indigo visual foundation.
+* Mint and violet pastel accents.
+* Responsive desktop, tablet, and mobile layouts.
 
-User enters their tasks, deadlines, priorities, and available time.
+## Technologies & Tools
 
-Choose Daily or Weekly plan.
+* **React** — User interface development
+* **TypeScript** — Type-safe application development
+* **Vite** — Development server and build tooling
+* **Tailwind CSS** — Responsive styling and UI design
+* **AI / LLM API** — Dynamic AI-generated responses
+* **Lucide Icons** — Interface icons
+* **Git & GitHub** — Version control and repository hosting
+* **Lovable** — AI-assisted application development
 
-Preset scenarios: Project Launch and Weekly Review.
+## Setup Instructions
 
-AI dynamically prioritizes tasks and creates a realistic schedule.
+### 1. Clone the repository
 
-Allow the generated schedule to be edited.
+```bash
+git clone https://github.com/YOUR-USERNAME/ai-workplace-companion.git
+```
 
-3. AI Research Assistant
+### 2. Navigate to the project
 
-Accept a topic, pasted article/content, or URL.
+```bash
+cd ai-workplace-companion
+```
 
-AI generates:
+### 3. Install dependencies
 
-Summary
+```bash
+npm install
+```
 
-Key Insights
+### 4. Configure the AI API
 
-Recommendations
+Create a `.env` file in the project root and add the required AI API configuration.
 
-Do not use generic placeholder responses.
+Example:
 
-If a URL cannot actually be accessed, clearly tell the user that the content could not be retrieved rather than inventing a summary.
+```env
+VITE_AI_API_KEY=your_api_key_here
+```
 
-Editable and copyable results.
+> Never commit API keys or other secrets to GitHub. Add `.env` to `.gitignore`.
 
-4. AI Workplace Chat
+### 5. Start the development server
 
-Fully interactive AI workplace assistant.
-
-Every response must be dynamically generated based on the user's prompt and conversation context.
-
-Support workplace writing, productivity, planning, brainstorming, research, and general professional questions.
-
-Include suggested prompts, Clear Chat, Copy, and Regenerate actions.
-
-Dashboard UI
-
-Create a polished SaaS dashboard with:
-
-Slate/indigo base
-
-Mint/violet pastel accents
-
-Light/Dark Mode
-
-Responsive desktop/tablet/mobile design
-
-Collapsible sidebar
-
-Top header
-
-Cmd+K / Ctrl+K Command Palette
-
-Dashboard cards linking to each AI tool
-
-Sidebar:
-
-Dashboard
-
-Email Generator
-
-Task Planner
-
-Research Assistant
-
-AI Chat
-
-AI UX
-
-Use structured forms and prompts to collect useful context before generating results.
-
-Show appropriate states:
-
-Generating/loading animation
-
-Empty state
-
-Error state
-
-Regenerate
-
-Copy
-
-Edit output
-
-Never present hardcoded AI responses as if they were generated by AI.
-
-Responsible AI
-
-Display:
-"AI-generated content may contain errors. Review and verify important information before using it."
-
-Important
-
-Prioritize the actual AI-generation experience over decorative features. Keep the application lightweight and avoid unnecessary functionality because the Lovable account has limited credits.
-
-This project was built with [Lovable](https://lovable.dev).
-
-## Build with Lovable
-
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/11f741b7-2c41-43b2-baa5-c23dd18903a8).
-
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
-
-## Development
-
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
-
-```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
+```bash
 npm run dev
 ```
+
+The application will be available at the local development URL provided by Vite.
+
+### 6. Build for production
+
+```bash
+npm run build
+```
+
+## Project Architecture
+
+The application is organized around independent productivity tools:
+
+```text
+AI Workplace Companion
+│
+├── Dashboard
+├── Smart Email Generator
+├── AI Task Planner
+├── AI Research Assistant
+├── AI Workplace Chat
+├── Command Palette
+└── Theme Settings
+```
+
+## Data & Privacy
+
+This project does not use a database or persistent storage.
+
+* No user accounts
+* No authentication
+* No database
+* No persistent conversation history
+* No intentional storage of generated workplace content
+
+AI requests may be processed by the configured third-party AI provider according to that provider's policies.
+
+## Author
+
+**Jolene Rankin**
+
+GitHub: [Add your GitHub profile URL]
+
+---
+
+If you find this project useful, consider giving the repository a star.
+
+
