@@ -87,7 +87,7 @@ The application is designed as a **frontend-first project** with no database, au
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/YOUR-USERNAME/ai-workplace-companion.git
+git clone https://github.com/JoleneRan/ai-workplace-companion.git
 ```
 
 ### 2. Navigate to the project
@@ -160,7 +160,7 @@ AI requests may be processed by the configured third-party AI provider according
 
 **Jolene Rankin**
 
-GitHub: [Add your GitHub profile URL]
+GitHub:https://github.com/JoleneRan
 
 ---
 
